@@ -177,19 +177,16 @@ class _ImageEditorProState extends State<ImageEditorPro> {
             FlatButton(
                 child: Text('Done'),
                 textColor: Colors.white,
-                onPressed: () {
-                  screenshotController
-                      .capture(
-                          delay: Duration(milliseconds: 500), pixelRatio: 1.5)
-                      .then((File image) async {
-                    //print("Capture Done");
-
-                    final paths = await getExternalStorageDirectory();
-                    await image.copy(paths.path +
-                        '/' +
-                        DateTime.now().millisecondsSinceEpoch.toString() +
-                        '.png');
-                    Navigator.pop(context, image);
+                onPressed: () async {
+                  final paths = await getExternalStorageDirectory();
+                  final fileName =  DateTime.now().millisecondsSinceEpoch.toString() + '.png';
+                  await screenshotController
+                      .captureAndSave(
+                      paths.path,
+                      fileName: fileName,
+                      delay: Duration(milliseconds: 500), pixelRatio: 1.5)
+                  .then((value) async {
+                    Navigator.pop(context, value);
                   }).catchError((onError) {
                     print(onError);
                   });

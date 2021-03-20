@@ -11,15 +11,15 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   zoom_widget: ^0.1.3
-  font_awesome_flutter: ^8.11.0
-  image_picker: ^0.6.7+21
-  path_provider: ^1.6.27
+  font_awesome_flutter: ^9.0.0
+  image_picker: ^0.7.3
+  path_provider: ^2.0.1
   image_gallery_saver: ^1.6.7
-  permission_handler: ^5.0.1+1
-  dio: ^3.0.10
-  screenshot: ^0.2.0
-  signature: ^3.2.0
-  flutter_colorpicker: ^0.3.5
+  permission_handler: ^6.1.1
+  dio: ^4.0.0-prev2
+  screenshot: ^1.0.0-nullsafety.1
+  signature: ^4.0.0-nullsafety
+  flutter_colorpicker: ^0.4.0-nullsafety.0
 
 dev_dependencies:
   pedantic: ^1.9.2
