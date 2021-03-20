@@ -16,7 +16,6 @@ dependencies:
   path_provider: ^2.0.1
   image_gallery_saver: ^1.6.7
   permission_handler: ^6.1.1
-  dio: ^4.0.0-prev2
   screenshot: ^1.0.0-nullsafety.1
   signature: ^4.0.0-nullsafety
   flutter_colorpicker: ^0.4.0-nullsafety.0
